@@ -27,9 +27,7 @@ public class OpenSettings extends ReactContextBaseJavaModule {
     @ReactMethod
     public void openSettings() {
         final Intent i = new Intent();
-        i.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        i.addCategory(Intent.CATEGORY_DEFAULT);
-        i.setData(Uri.parse("package:" + reactContext.getPackageName()));
+        i.setAction(Settings.ACTION_WIFI_SETTINGS);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         i.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
